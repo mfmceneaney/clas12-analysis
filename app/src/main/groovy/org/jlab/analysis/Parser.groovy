@@ -90,6 +90,7 @@ public class Parser {
         System.out.println("\t-tspin [float..] : Target spin vector components for kinematics (def: 0 0 1)");
         System.out.println("\t-tspin_sign [int] : Target spin vector sign (def: 1)");
         System.out.println("\t-qa            : Use clasqaDB check");
+        System.out.println("\t-set_run [int] : Set run # in NTuple");
         System.out.println("\t-qm   [string] : Specify clasqaDB check method (def: OkForAsymmetry)");
         System.out.println("\t-fc   [int]    : Use fiducial volume cuts (0-loose, 1-med, 2-tight)");
         System.out.println("\t-momc [string, int, int] : Use momentum corrections. Parameters:");
@@ -378,6 +379,11 @@ public class Parser {
                 case "-fc":  analysis.setFC(true); valid_opt = true; break;
                 case "-ma":  analysis.setMatch(true); valid_opt = true; break;
                 // case "-mc":  analysis.setUseMC(true); valid_opt = true; break;
+
+                // Fiducial cuts option
+                case "-set_run":
+                    if (args.length>2) { try { analysis.setRun(Integer.parseInt(args[i+1])); valid_opt = true; break; }
+                    catch (Exception exception) { System.out.println(" WARNING: No run number supplied.  Defaulting to bank values."); } }
             
                 // QA method option
                 case "-qm":
