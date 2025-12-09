@@ -41,6 +41,7 @@ public class Kinematics {
     protected LorentzVector                        _lv_s_up;         // Lorentz vector of target spin in lab frame (up)
     protected LorentzVector                        _lv_s_dn;         // Lorentz vector of target spin in lab frame (down)
     protected int                                  _tspin_sign;    // sign of target spin, useful for MC samples
+    protected int                                  _run;           // run number to use
 
     // Options
     protected static boolean _strict        = false;    // use strict pid to mass assignment in kinematics calculations
@@ -81,6 +82,12 @@ public class Kinematics {
             event.read(bank);
             double num = bank.getInt("run",0);
             return num;
+        }
+    };
+
+    protected ConfigVar _getRunNumFixed = new ConfigVar() {
+        double get(HipoReader reader, Event event) {
+            return (double)Kinematics.this._run;
         }
     };
 
@@ -338,6 +345,16 @@ public class Kinematics {
     protected boolean addEvNum() {return this._addEvNum;}
     protected void setAddRunNum(boolean addRunNum) {this._addRunNum = addRunNum; if (addRunNum) {this._configs.put("run",this._getRunNum);} else {this._configs.remove("run");}}
     protected boolean addRunNum() {return this._addRunNum;}
+    protected void setAddRunNum(boolean addRunNum, int run) {
+        this._addRunNum = addRunNum;
+        this._run = run;
+        if (addRunNum) {
+            this._configs.put("run",this._getRunNumFixed);
+        } else {
+            this._configs.remove("run");
+        }
+    }
+    protected boolean getRunNum() {return this._run;}
     protected void setAddTorus(boolean addTorus) {this._addTorus = addTorus; if (addTorus) {this._configs.put("torus",this._getTorus);} else {this._configs.remove("torus");}}
     protected boolean addTorus() {return this._addTorus;}
     protected void setAddHelicity(boolean addHelicity) {this._addHelicity = addHelicity; if (addHelicity) {this._configs.put("helicity",this._getHelicity);} else {this._configs.remove("helicity");}}

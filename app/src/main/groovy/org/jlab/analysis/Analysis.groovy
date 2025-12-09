@@ -825,6 +825,17 @@ public class Analysis {
     }
 
     /**
+    * Set run number to add to TNTuple and propagate changes to kinematics.
+    * @param run
+    */
+    protected void setRunNum(int run) {
+
+        this._addRunNum = true;
+        this._kinematics.setAddRunNum(false);
+        this._kinematics.setAddRunNum(true,run);
+    }
+
+    /**
     * Set boolean for adding ML predictions and labels to TNTuple and propagate changes to kinematics.
     * @param addEvNum
     */
