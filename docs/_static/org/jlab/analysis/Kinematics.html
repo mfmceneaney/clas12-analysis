@@ -324,61 +324,73 @@ extends java.lang.Object</pre>
                         
                         <tr class="rowColor">
                             <td class="colFirst"><code><strong>protected&nbsp;<a href='../../../org/jlab/analysis/ConfigVar.html'>ConfigVar</a></strong></code>&nbsp;</td>
-                            <td class="colLast"><code><a href="#_getStartTime">_getStartTime</a></code></td>
+                            <td class="colLast"><code><a href="#_getRunNumFixed">_getRunNumFixed</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
                         <tr class="altColor">
+                            <td class="colFirst"><code><strong>protected&nbsp;<a href='../../../org/jlab/analysis/ConfigVar.html'>ConfigVar</a></strong></code>&nbsp;</td>
+                            <td class="colLast"><code><a href="#_getStartTime">_getStartTime</a></code></td>
+                            <td class="colLast"></td>
+                        </tr>
+                        
+                        <tr class="rowColor">
                             <td class="colFirst"><code><strong>protected&nbsp;<a href='../../../org/jlab/analysis/ConfigVar.html'>ConfigVar</a></strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_getTSpinSign">_getTSpinSign</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code><strong>protected&nbsp;<a href='../../../org/jlab/analysis/ConfigVar.html'>ConfigVar</a></strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_getTorus">_getTorus</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code><strong>protected&nbsp;java.lang.String[]</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_gkin">_gkin</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code><strong>protected&nbsp;static&nbsp;java.util.ArrayList&lt;java.util.ArrayList&lt;java.lang.Integer&gt;&gt;</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_groups">_groups</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code><strong>protected&nbsp;java.lang.String[]</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_ikin">_ikin</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code><strong>protected&nbsp;org.jlab.clas.physics.LorentzVector</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_lv_s_dn">_lv_s_dn</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code><strong>protected&nbsp;org.jlab.clas.physics.LorentzVector</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_lv_s_up">_lv_s_up</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code><strong>protected&nbsp;static&nbsp;java.util.ArrayList&lt;java.lang.Integer&gt;</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_parents">_parents</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code><strong>protected&nbsp;static&nbsp;boolean</strong></code>&nbsp;</td>
                             <td class="colLast"><code><a href="#_require_e">_require_e</a></code></td>
+                            <td class="colLast"></td>
+                        </tr>
+                        
+                        <tr class="altColor">
+                            <td class="colFirst"><code><strong>protected&nbsp;int</strong></code>&nbsp;</td>
+                            <td class="colLast"><code><a href="#_run">_run</a></code></td>
                             <td class="colLast"></td>
                         </tr>
                         
@@ -662,160 +674,172 @@ extends java.lang.Object</pre>
                         
                         <tr class="altColor">
                             <td class="colFirst"><code></code></td>
+                            <td class="colLast"><code>protected&nbsp;boolean</code></td>
+                            <td class="colLast"><code><strong><a href="#getRunNum()">getRunNum</a></strong>()</code><br></td>
+                        </tr>
+                        
+                        <tr class="rowColor">
+                            <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.util.HashMap&lt;java.lang.String, <a href='../../../org/jlab/analysis/SIDISVar.html' title='SIDISVar'>SIDISVar</a>&gt;</code></td>
                             <td class="colLast"><code><strong><a href="#getSIDISVars()">getSIDISVars</a></strong>()</code><br>Access hashmap of kinematic names lambda expressions for computation.</td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;<a href='../../../org/jlab/analysis/DecayProduct.html'>DecayProduct</a></code></td>
                             <td class="colLast"><code><strong><a href="#getScatteredBeam(ArrayList)">getScatteredBeam</a></strong>(java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; list)</code><br>Find scattered beam with default limits on absolute value of chi2pid
  and on the status: |chi2pid|<3 && status<=-2000.</td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;<a href='../../../org/jlab/analysis/DecayProduct.html'>DecayProduct</a></code></td>
                             <td class="colLast"><code><strong><a href="#getScatteredBeam(ArrayList, float, int)">getScatteredBeam</a></strong>(java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; list, float chi2pid, int status)</code><br>Find scattered beam with limits on absolute value of chi2pid
  and on the staus.  </td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;boolean</code></td>
                             <td class="colLast"><code><strong><a href="#getTSpinSign()">getTSpinSign</a></strong>()</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>org.jlab.clas.physics.LorentzVector</code></td>
                             <td class="colLast"><code><strong><a href="#getTargetSpinLV()">getTargetSpinLV</a></strong>()</code><br>Set target spin lorentz vector in lab frame.</td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.lang.String[]</code></td>
                             <td class="colLast"><code><strong><a href="#keySet()">keySet</a></strong>()</code><br>Access keyset for all variables to access, useful for setting TNTuple entry names.</td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.lang.String[]</code></td>
                             <td class="colLast"><code><strong><a href="#mcKeySet()">mcKeySet</a></strong>()</code><br>Access keyset for all MC variables to access, useful for setting TNTuple entry names.</td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;boolean</code></td>
                             <td class="colLast"><code><strong><a href="#passesCuts(HashMap)">passesCuts</a></strong>(java.util.HashMap&lt;java.lang.String, java.lang.Double&gt; kinematics)</code><br>Checks if event passes given cuts.</td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.util.HashMap&lt;java.lang.String, java.lang.Double&gt;</code></td>
                             <td class="colLast"><code><strong><a href="#processEvent(ArrayList, org.jlab.analysis.DecayProduct)">processEvent</a></strong>(java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; list, <a href='../../../org/jlab/analysis/DecayProduct.html'>DecayProduct</a> beam)</code><br>Get variables and check they pass cuts, returns empty hashmap if not so make sure to check size.</td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.util.HashMap&lt;java.lang.String, java.lang.Double&gt;</code></td>
                             <td class="colLast"><code><strong><a href="#processEvent(org.jlab.jnp.hipo4.io.HipoReader, org.jlab.jnp.hipo4.data.Event)">processEvent</a></strong>(org.jlab.jnp.hipo4.io.HipoReader reader, org.jlab.jnp.hipo4.data.Event event)</code><br>Get variables and check they pass cuts, returns empty hashmap if not so make sure to check size.</td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.util.HashMap&lt;java.lang.String, java.lang.Double&gt;</code></td>
                             <td class="colLast"><code><strong><a href="#processEvent(org.jlab.jnp.hipo4.io.HipoReader, org.jlab.jnp.hipo4.data.Event, ArrayList, org.jlab.analysis.DecayProduct)">processEvent</a></strong>(org.jlab.jnp.hipo4.io.HipoReader reader, org.jlab.jnp.hipo4.data.Event event, java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; list, <a href='../../../org/jlab/analysis/DecayProduct.html'>DecayProduct</a> beam)</code><br>Get variables and check they pass cuts, returns empty hashmap if not so make sure to check size.</td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;java.util.HashMap&lt;java.lang.String, java.lang.Double&gt;</code></td>
                             <td class="colLast"><code><strong><a href="#processMCEvent(org.jlab.jnp.hipo4.io.HipoReader, org.jlab.jnp.hipo4.data.Event, ArrayList, ArrayList, ArrayList)">processMCEvent</a></strong>(org.jlab.jnp.hipo4.io.HipoReader reader, org.jlab.jnp.hipo4.data.Event event, java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; list, java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; ilist, java.util.ArrayList&lt;<a href='../../../org/jlab/analysis/DecayProduct.html' title='DecayProduct'>DecayProduct</a>&gt; fullmclist)</code><br>Get MC variables and check they pass cuts, returns empty hashmap if not so make sure to check size.</td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;boolean</code></td>
                             <td class="colLast"><code><strong><a href="#requireE()">requireE</a></strong>()</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddAffKin(boolean)">setAddAffKin</a></strong>(boolean addAffKin)</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddBeamCharge(boolean)">setAddBeamCharge</a></strong>(boolean addBeamCharge)</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddEvNum(boolean)">setAddEvNum</a></strong>(boolean addEvNum)</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddGroupKin(boolean)">setAddGroupKin</a></strong>(boolean addGroupKin)</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddHelicity(boolean)">setAddHelicity</a></strong>(boolean addHelicity)</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddIndivKin(boolean)">setAddIndivKin</a></strong>(boolean addIndivKin)</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddLambdaKin(boolean)">setAddLambdaKin</a></strong>(boolean addLambdaKin)</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddLiveTime(boolean)">setAddLiveTime</a></strong>(boolean addLiveTime)</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddMLLabel(boolean)">setAddMLLabel</a></strong>(boolean addMLLabel)</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddMLPred(boolean)">setAddMLPred</a></strong>(boolean addMLPred)</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddMxMomenta(boolean)">setAddMxMomenta</a></strong>(boolean addMxMomenta)</code><br></td>
                         </tr>
                         
-                        <tr class="altColor">
+                        <tr class="rowColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddRFTime(boolean)">setAddRFTime</a></strong>(boolean addRFTime)</code><br></td>
                         </tr>
                         
-                        <tr class="rowColor">
+                        <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>protected&nbsp;void</code></td>
                             <td class="colLast"><code><strong><a href="#setAddRunNum(boolean)">setAddRunNum</a></strong>(boolean addRunNum)</code><br></td>
+                        </tr>
+                        
+                        <tr class="rowColor">
+                            <td class="colFirst"><code></code></td>
+                            <td class="colLast"><code>protected&nbsp;void</code></td>
+                            <td class="colLast"><code><strong><a href="#setAddRunNum(boolean, int)">setAddRunNum</a></strong>(boolean addRunNum, int run)</code><br></td>
                         </tr>
                         
                         <tr class="altColor">
@@ -1204,6 +1228,14 @@ extends java.lang.Object</pre>
                             </li>
                         </ul>
                     
+                        <a name="_getRunNumFixed"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>protected&nbsp;<a href='../../../org/jlab/analysis/ConfigVar.html'>ConfigVar</a> <strong>_getRunNumFixed</strong></h4>
+                                <p></p>
+                            </li>
+                        </ul>
+                    
                         <a name="_getStartTime"><!-- --></a>
                         <ul class="blockListLast">
                             <li class="blockList">
@@ -1280,6 +1312,14 @@ extends java.lang.Object</pre>
                         <ul class="blockListLast">
                             <li class="blockList">
                                 <h4>protected&nbsp;static&nbsp;boolean <strong>_require_e</strong></h4>
+                                <p></p>
+                            </li>
+                        </ul>
+                    
+                        <a name="_run"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>protected&nbsp;int <strong>_run</strong></h4>
                                 <p></p>
                             </li>
                         </ul>
@@ -1624,6 +1664,14 @@ extends java.lang.Object</pre>
                             </li>
                         </ul>
                     
+                        <a name="getRunNum()"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>protected&nbsp;boolean <strong>getRunNum</strong>()</h4>
+                                <p></p>
+                            </li>
+                        </ul>
+                    
                         <a name="getSIDISVars()"><!-- --></a>
                         <ul class="blockListLast">
                             <li class="blockList">
@@ -1832,6 +1880,14 @@ extends java.lang.Object</pre>
                         <ul class="blockListLast">
                             <li class="blockList">
                                 <h4>protected&nbsp;void <strong>setAddRunNum</strong>(boolean addRunNum)</h4>
+                                <p></p>
+                            </li>
+                        </ul>
+                    
+                        <a name="setAddRunNum(boolean, int)"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>protected&nbsp;void <strong>setAddRunNum</strong>(boolean addRunNum, int run)</h4>
                                 <p></p>
                             </li>
                         </ul>

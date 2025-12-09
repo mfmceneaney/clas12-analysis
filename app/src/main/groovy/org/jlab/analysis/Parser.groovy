@@ -382,7 +382,7 @@ public class Parser {
 
                 // Fiducial cuts option
                 case "-set_run":
-                    if (args.length>2) { try { analysis.setRunNum(Integer.parseInt(args[i+1])); valid_opt = true; break; }
+                    if (args.length>2) { try { analysis.setRun(Integer.parseInt(args[i+1])); valid_opt = true; break; }
                     catch (Exception exception) { System.out.println(" WARNING: No run number supplied.  Defaulting to bank values."); } }
             
                 // QA method option
