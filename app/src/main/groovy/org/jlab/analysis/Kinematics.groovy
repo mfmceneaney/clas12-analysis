@@ -1112,7 +1112,7 @@ public class Kinematics {
             double phi_h_  = sign__ * Math.acos(nhat.dot(phihat)/(nhat.mag()*phihat.mag()));
             if (phi_h_<0) phi_h_ = 2*Math.PI + phi_h_;
 
-            // Get phi_r_perp for dihadron analyses
+            // Get 2*R=P1-P2 for dihadron analyses
             LorentzVector rt = new LorentzVector(); // Compute difference vector in CoM frame.
             int idx = 0;
             for (LorentzVector _rt_ : lvList) {
@@ -1127,7 +1127,7 @@ public class Kinematics {
                 }
                 idx++;
             }
-            Vector3 rt__ = rt.vect().cross(lv__.vect()); ///NOTE: Get component perpendicular to Ph in CoM frame.
+            Vector3 rt__ = lv__.vect().cross(rt.vect().cross(lv__.vect())); ///NOTE: Get component perpendicular to Ph in CoM frame. R_perp \propto P X (R X P)
             // Vector3 nhat           = q__.vect().cross(lv_max__.vect()); // vA x vB
             Vector3 phi_rt_hat     = q__.vect().cross(rt__);     // vC x vD
             double phi_rt_sign__   = nhat.dot(rt__)>=0 ? 1 : -1; // sign of (vA x vB) . vD
